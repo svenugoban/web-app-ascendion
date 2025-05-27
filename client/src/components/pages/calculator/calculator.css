@@ -1,0 +1,12 @@
+.calculate-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
+
+.calculate-form {
+  text-align: center;
+  width: 450px;
+  margin-left: 60px;
+}
