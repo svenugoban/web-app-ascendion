@@ -2,9 +2,8 @@
 import React, { Suspense, lazy,  } from "react";
 import { BrowserRouter as Router, Routes, Route, } from "react-router-dom";
 
-
 // Lazy-loaded components
-const Calculator = lazy(() => import("./components/pages/calculator/calculator"));
+const NavBar = lazy(() => import("./components/pages/navBar/navBar"));
 
 const App = () => {
   return (
@@ -12,7 +11,7 @@ const App = () => {
       <Router>
         <Suspense fallback={<div>Loading...</div>}>
           <Routes>        
-            <Route path="/calculate" element={<Calculator />} />            
+            <Route path="/" element={<NavBar />} />             
           </Routes>
         </Suspense>
       </Router>

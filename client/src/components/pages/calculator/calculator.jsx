@@ -15,7 +15,7 @@ const Calculator = () => {
   return (
     <div className='calculate-container'>
       <div className='calculate-form'>
-        <Typography sx={{ fontSize: "24px", color: "black", fontWeight: "bold", mb: 2 }}>Sum Calculator</Typography>
+        <Typography sx={{ fontSize: "24px", color: "black", fontWeight: "bold", mb: 2 }}>Adding Two Numbers</Typography>
 
         <Box mb={2}>
           <Typography sx={{ fontSize: "18px", color: "black" }} align='left'>
