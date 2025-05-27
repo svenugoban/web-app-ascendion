@@ -1,21 +1,30 @@
 import React, { useState } from "react";
 import { AppBar, Toolbar, Box, InputBase } from "@mui/material";
 import Calculator from "../calculator/calculator";
+import TwoSumChecker from "../twoSumChecker/twoSumChecker";
 
 const Navbar = () => {
   const [showCalculator, setShowCalculator] = useState(false);
+  const [showChecker, setShowChecker] = useState(false);
 
   const handleCalculatorClick = () => {
     setShowCalculator((prev) => !prev);
+    setShowChecker(false);
   };
+
+  const handleTwoSumChecker = () => {
+    setShowChecker((prev) => !prev);
+    setShowCalculator(false);
+  };
+
   const menuItems = [
     { label: "Showcase", href: "/" },
     { label: "Docs", href: "/" },
     { label: "Blog", href: "/" },
     { label: "Analytics", href: "/" },
     { label: "Templates", href: "/" },
-    { label: "Enterprise", href: "/" },
-    { label: "Calculator", href: "#", onClick: handleCalculatorClick }, // handle click separately
+    { label: "TwoSumChecker", href: "#", onClick: handleTwoSumChecker },
+    { label: "Calculator", href: "#", onClick: handleCalculatorClick },
   ];
 
   return (
@@ -61,6 +70,7 @@ const Navbar = () => {
         </Toolbar>
       </AppBar>
       {showCalculator && <Calculator />}
+      {showChecker && <TwoSumChecker />}
     </>
   );
 };

@@ -28,7 +28,7 @@ const Calculator = () => {
           <TextField type='number' value={num2} onChange={(e) => setNum2(e.target.value)} fullWidth />
         </Box>
 
-        <Button variant='contained' onClick={calculateSum}>
+        <Button variant='contained' onClick={calculateSum} fullWidth>
           Calculate
         </Button>
 
